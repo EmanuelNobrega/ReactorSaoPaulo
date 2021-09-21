@@ -188,7 +188,7 @@ module.exports = {
 
   compilers: {
     solc: {
-      version: "0.5.4"
+      version: "0.8.7"
     }
   }
 }
@@ -266,7 +266,8 @@ No diretório `Contracts`, crie um arquivo chamado `TaskManager.sol`.
 Copie e cole o smart contract do código abaixo:
 
 ```javascript
-pragma solidity 0.5.4;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
 
 contract TaskManager {
 
@@ -296,7 +297,7 @@ contract TaskManager {
         }
     }
     
-    constructor() public {
+    constructor() {
         nTasks = 0;      
         addTask ("Create Task Manager", TaskPhase.Done, 1);
         addTask ("Create Your first task", TaskPhase.ToDo, 1);
@@ -324,7 +325,8 @@ contract TaskManager {
             phase: _phase, 
             priority: _priority
         });
-        index = tasks.push (taskAux) - 1;
+        tasks.push(taskAux);
+        index = tasks.length - 1;
         nTasks ++;
         myTasks[msg.sender].push(index);
         emit TaskAdded (msg.sender, _name, _phase, _priority);
