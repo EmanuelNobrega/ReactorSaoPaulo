@@ -350,12 +350,12 @@ Os smart contracts escritos em Solidity são semelhantes às classes em linguage
 Todo arquivo solidity deve começar definindo qual a versão de compilador será utilizada. Isto é realizado com a seguinte instrução.
 
 ```javascript
-pragma solidity 0.5.4;
+pragma solidity 0.8.7;
 ```
 
-No caso utilizaremos a versão de compilador `0.5.4`.
+No caso utilizaremos a versão de compilador `0.8.7`.
 
-Você pode ver a documentação específica de cada versão, como por exemplo, para a versão [0.5.4](https://solidity.readthedocs.io/en/v0.5.4/).
+Você pode ver a documentação específica de cada versão, como por exemplo, para a versão [0.8.7](https://solidity.readthedocs.io/en/v0.8.7/).
 
 ### Contract
 
