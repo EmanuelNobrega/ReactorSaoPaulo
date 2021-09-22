@@ -267,7 +267,7 @@ Copie e cole o smart contract do código abaixo:
 
 ```javascript
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity 0.8.7;
 
 contract TaskManager {
 
